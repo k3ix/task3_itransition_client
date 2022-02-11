@@ -52,7 +52,7 @@ const Registration = () => {
                         id="registerFormField"
                         name="password"
                         placeholder="Password"/>
-                    <button type="submit" className="logregbtn">Log In</button>
+                    <button type="submit" className="logregbtn">Register</button>
                 </Form>
             </Formik>
         </div>
