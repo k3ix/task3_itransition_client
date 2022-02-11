@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+}
+
+.navBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+
+
+a, .logoutbtn {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #111;
+}
+
+.logoutbtn {
+  background-color: #333;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.logoutbtn:hover {
+  background-color: #111;
+}
+
+.loginForm, .registerForm {
+  border: 3px solid #f1f1f1;
+}
+
+#loginFormField, #registerFormField {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.logregbtn {
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.logregbtn:hover {
+  background-color: #111;
+}
+
