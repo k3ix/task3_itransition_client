@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Switch, Link, useHistory } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
@@ -10,7 +10,7 @@ import axios from 'axios';
 
 
 function App() {
-    let history = useHistory();
+
     const[authState, setAuthState] = useState(false);
 
     useEffect(() => {
@@ -21,7 +21,6 @@ function App() {
         }).then((response) => {
             if (response.data.error) {
                 setAuthState(false);
-                history.push("/login");
             } else {
                 setAuthState(true);
             }

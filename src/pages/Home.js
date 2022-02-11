@@ -34,7 +34,17 @@ const Home = () => {
         axios.get("https://task3-itransition.herokuapp.com/users").then((response) => {
             setListOfUsers(response.data);
         });
+
+        axios.get("https://task3-itransition.herokuapp.com/users/auth", {
+            headers: { accessToken: localStorage.getItem("accessToken") }
+        }).then((response) => {
+            if (response.data.error) {
+                history.push("/login");
+            }
+        })
     }, []);
+
+
 
     const deleteData = () => {
         axios.get("https://task3-itransition.herokuapp.com/users/auth",
