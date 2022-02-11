@@ -46,15 +46,15 @@ function App() {
             <AuthContext.Provider value={{authState, setAuthState}}>
                 <Router>
                     <div className="navBar">
-                      <Link to="/">Home Page</Link>
-                      {!authState ? (
+                        <Link to="/">Home Page</Link>
+                        <Link to="/register">Register</Link>
+                        {!authState ? (
                           <>
                               <Link to="/login">Log In</Link>
-                              <Link to="/register">Register</Link>
                           </>
-                      ) : (
+                        ) : (
                           <button onClick={logOut} className="logoutbtn">Log Out</button>
-                      )}
+                        )}
                     </div>
                 <Switch>
                     <Route path="/" exact component={Home} />
