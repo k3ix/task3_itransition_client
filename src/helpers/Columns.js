@@ -1,21 +1,15 @@
 export const COLUMNS = [
     {
-        field: "Id",
-        headerName: 'ID',
-        sortable: false,
-        width: 60
-    },
-    {
         field: "username",
         headerName: 'Username',
         sortable: false,
-        width: 140
+        width: 250
     },
     {
         field: "email",
         headerName: 'E-Mail',
         sortable: false,
-        width: 220
+        width: 250
     },
     {
         field: 'createdAt',
@@ -44,13 +38,13 @@ export const COLUMNS = [
         field: "status",
         headerName: "Status",
         sortable: false,
-        width: 140
+        width: 120
     },
     {
         field: "isBlocked",
         headerName: "Block status",
         sortable: false,
-        width: 140,
+        width: 120,
         valueFormatter: (props) => {
             if (props.value === true) {
                 return `Blocked`

@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     mainTable: {
         height: 630,
         width: "100%",
-        maxWidth: 1376,
+        maxWidth: 972,
         backgroundColor: "white",
         margin: "auto",
         textAlign: "center",
