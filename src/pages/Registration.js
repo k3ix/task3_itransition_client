@@ -15,7 +15,7 @@ const Registration = () => {
     }
 
     const onSubmit = (data) => {
-        axios.post("http://localhost:3001/users/register", data).then((response) => {
+        axios.post("https://task3-itransition.herokuapp.com/users/register", data).then((response) => {
             history.push("/login");
         })
     }

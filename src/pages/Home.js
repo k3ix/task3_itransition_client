@@ -31,18 +31,18 @@ const Home = () => {
 
 
     useEffect(() => {
-        axios.get("http://localhost:3001/users").then((response) => {
+        axios.get("https://task3-itransition.herokuapp.com/users").then((response) => {
             setListOfUsers(response.data);
         });
     }, []);
 
     const deleteData = () => {
-        axios.get("http://localhost:3001/users/auth",
+        axios.get("https://task3-itransition.herokuapp.com/users/auth",
             { headers: { accessToken: localStorage.getItem("accessToken") } })
             .then((response) => {
                 if(!response.data.error) {
                     const deleteIds = listOfIds;
-                    axios.put("http://localhost:3001/users/deleteUsers", deleteIds).then(() => {
+                    axios.put("https://task3-itransition.herokuapp.com/users/deleteUsers", deleteIds).then(() => {
                         history.go(0);
                     })
                 } else {
@@ -52,7 +52,7 @@ const Home = () => {
     };
 
     const blockUser = () => {
-        axios.get("http://localhost:3001/users/auth", {
+        axios.get("https://task3-itransition.herokuapp.com/users/auth", {
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             },
@@ -60,7 +60,7 @@ const Home = () => {
             if (!response.data.error) {
                 console.log(response.data);
                 const blockIds = listOfIds;
-                axios.put("http://localhost:3001/users/blockUsers", blockIds).then(() => {
+                axios.put("https://task3-itransition.herokuapp.com/users/blockUsers", blockIds).then(() => {
                     if (blockIds.includes(response.data.id)) {
                         history.push("/login");
                     } else {
@@ -74,14 +74,14 @@ const Home = () => {
     };
 
     const unblockUser = () => {
-        axios.get("http://localhost:3001/users/auth", {
+        axios.get("https://task3-itransition.herokuapp.com/users/auth", {
             headers: {
                 accessToken: localStorage.getItem("accessToken")
             },
         }).then((response) => {
             if (!response.data.error) {
                 const unblockIds = listOfIds;
-                axios.put("http://localhost:3001/users/unblockUsers", unblockIds).then(() => {
+                axios.put("https://task3-itransition.herokuapp.com/users/unblockUsers", unblockIds).then(() => {
                     history.go(0);
                 })
             } else {
